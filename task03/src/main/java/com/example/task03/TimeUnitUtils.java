@@ -15,6 +15,9 @@ public class TimeUnitUtils {
         return new Milliseconds(seconds.toMillis());
     }
 
+    public static Milliseconds toMillis(Hours hours) {
+        return new Milliseconds(hours.toMillis());
+    }
     /**
      * Конвертирует интервал в миллисекундах в интервал в секундах
      *
@@ -23,5 +26,21 @@ public class TimeUnitUtils {
      */
     public static Seconds toSeconds(Milliseconds millis) {
         return new Seconds(millis.toSeconds());
+    }
+
+    public static Seconds toSeconds(Hours hours) {
+        return new Seconds(hours.toSeconds());
+    }
+
+    public static Minutes toMinutes(Hours hours) {
+        return new Minutes(hours.toMinutes());
+    }
+
+    public static Hours getHours(Milliseconds milliseconds) {
+        return new Hours(milliseconds.getHours());
+    }
+
+    public static Hours getHours(Seconds seconds) {
+        return new Hours(seconds.getHours());
     }
 }
